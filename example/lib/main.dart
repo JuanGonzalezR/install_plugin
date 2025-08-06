@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
         ),
         body: TextButton(
           onPressed: () {
-            InstallPlugin.installApk('file path', 'appid')
+            InstallPlugin.installApk('file path')
                 .then((result) {
               print('install apk $result');
             }).catchError((error) {
