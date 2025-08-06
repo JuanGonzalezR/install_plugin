@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
 
-import 'package:flutter/services.dart';
 import 'package:install_plugin/install_plugin.dart';
 
 void main() {
@@ -22,8 +20,8 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text('Plugin example app'),
         ),
-        body: FlatButton(
-          onPressed: (){
+        body: TextButton(
+          onPressed: () {
             InstallPlugin.installApk('file path', 'appid')
                 .then((result) {
               print('install apk $result');
@@ -37,3 +35,5 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
+
+// Removed custom FlatButton class as it's not needed.
